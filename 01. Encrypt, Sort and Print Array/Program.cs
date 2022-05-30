@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Linq;
 
 namespace _01._Encrypt__Sort_and_Print_Array
 {
@@ -6,7 +7,9 @@ namespace _01._Encrypt__Sort_and_Print_Array
     {
         static void Main(string[] args)
         {
-            int n = int.Parse(Console.ReadLine());           
+            int n = int.Parse(Console.ReadLine());
+            int[] output = new int[n];
+            
 
             for (int i = 0; i < n; i++)
             {
@@ -48,9 +51,13 @@ namespace _01._Encrypt__Sort_and_Print_Array
                         }
                     }
                 }
-                Console.WriteLine(sum);
+                output[i] = sum;
             }
-            
+
+            foreach (var item in output.OrderBy(x => x))
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
