@@ -9,7 +9,7 @@ namespace _01._Encrypt__Sort_and_Print_Array
         {
             int n = int.Parse(Console.ReadLine());
             int[] output = new int[n];
-            
+
 
             for (int i = 0; i < n; i++)
             {
@@ -18,37 +18,23 @@ namespace _01._Encrypt__Sort_and_Print_Array
 
                 foreach (var letter in inputString)
                 {
-                    if (Char.IsLower(letter))
+                    switch (letter)
                     {
-                        switch (letter)
-                        {
-                            case 'a':
-                            case 'e':
-                            case 'i':
-                            case 'o':
-                            case 'u':
-                                sum += letter * inputString.Length;
-                                break;
-                            default:
-                                sum += letter / inputString.Length;
-                                break;
-                        }
-                    }
-                    else if (Char.IsUpper(letter))
-                    {
-                        switch (letter)
-                        {
-                            case 'A':
-                            case 'E':
-                            case 'I':
-                            case 'O':
-                            case 'U':
-                                sum += letter * inputString.Length;
-                                break;
-                            default:
-                                sum += letter / inputString.Length;
-                                break;
-                        }
+                        case 'a':
+                        case 'e':
+                        case 'i':
+                        case 'o':
+                        case 'u':
+                        case 'A':
+                        case 'E':
+                        case 'I':
+                        case 'O':
+                        case 'U':
+                            sum += letter * inputString.Length;
+                            break;
+                        default:
+                            sum += letter / inputString.Length;
+                            break;
                     }
                 }
                 output[i] = sum;
