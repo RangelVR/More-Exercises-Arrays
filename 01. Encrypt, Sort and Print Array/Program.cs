@@ -10,7 +10,6 @@ namespace _01._Encrypt__Sort_and_Print_Array
             int n = int.Parse(Console.ReadLine());
             int[] output = new int[n];
 
-
             for (int i = 0; i < n; i++)
             {
                 string inputString = Console.ReadLine();
