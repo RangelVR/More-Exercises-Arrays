@@ -37,10 +37,15 @@ namespace _01._Encrypt__Sort_and_Print_Array
                 }
                 output[i] = sum;
             }
-            foreach (var item in output.OrderBy(x => x))
+            Array.Sort(output);
+            foreach (var item in output)
             {
                 Console.WriteLine(item);
             }
+            //foreach (var item in output.OrderBy(x => x))
+            //{
+            //    Console.WriteLine(item);
+            //}
         }
     }
 }
