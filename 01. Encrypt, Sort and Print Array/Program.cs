@@ -14,7 +14,6 @@ namespace _01._Encrypt__Sort_and_Print_Array
             {
                 string inputString = Console.ReadLine();
                 int sum = 0;
-
                 foreach (var letter in inputString)
                 {
                     switch (letter)
@@ -38,7 +37,6 @@ namespace _01._Encrypt__Sort_and_Print_Array
                 }
                 output[i] = sum;
             }
-
             foreach (var item in output.OrderBy(x => x))
             {
                 Console.WriteLine(item);
