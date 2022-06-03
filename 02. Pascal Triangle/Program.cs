@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace _02._Pascal_Triangle
 {
@@ -21,11 +21,15 @@ namespace _02._Pascal_Triangle
                 }
                 triangle[i] = row;
             }
-           
-            for (int i = 0; i < triangle.Length; i++)
+            foreach (var row in triangle)
             {
-                Console.WriteLine(string.Join(" ", triangle[i]));
+                Console.WriteLine(string.Join(" ", row));
             }
+           
+            //for (int i = 0; i < triangle.Length; i++)
+            //{
+            //    Console.WriteLine(string.Join(" ", triangle[i]));
+            //}
         }
     }
 }
