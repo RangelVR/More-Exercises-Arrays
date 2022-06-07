@@ -24,14 +24,12 @@ namespace _04._Fold_and_Sum
                 int counter2 = stopIndex1;
 
                 for (int i = 0; i < stopIndex1 ; i++)
-                {
-                    
+                {                    
                     arrLefRight[counter1] = inputArr[i];
                     counter1--;
                 }
                 for (int j = inputArr.Length - 1; j >= stopIndex2; j--)
-                {
-                    
+                {                    
                     arrLefRight[counter2] = inputArr[j];
                     counter2++;
                 }
