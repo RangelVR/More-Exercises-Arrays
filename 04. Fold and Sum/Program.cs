@@ -31,7 +31,6 @@ namespace _04._Fold_and_Sum
                 }
                 for (int j = inputArr.Length - 1; j >= stopIndex2; j--)
                 {
-                    
                     arr1[counter2] = inputArr[j];
                     counter2++;
                 }
