@@ -15,8 +15,8 @@ namespace _04._Fold_and_Sum
 
             if (inputArr.Length > 4)
             {
-                int[] arr1 = new int[inputArr.Length / 2];
-                int[] arr2 = new int[inputArr.Length / 2];
+                int[] arrLefRight = new int[inputArr.Length / 2];
+                int[] arrMidle = new int[inputArr.Length / 2];
                 
                 int stopIndex1 = inputArr.Length / 4;
                 int stopIndex2 = inputArr.Length - stopIndex1;
@@ -26,22 +26,23 @@ namespace _04._Fold_and_Sum
                 for (int i = 0; i < stopIndex1 ; i++)
                 {
                     
-                    arr1[counter1] = inputArr[i];
+                    arrLefRight[counter1] = inputArr[i];
                     counter1--;
                 }
                 for (int j = inputArr.Length - 1; j >= stopIndex2; j--)
                 {
-                    arr1[counter2] = inputArr[j];
+                    
+                    arrLefRight[counter2] = inputArr[j];
                     counter2++;
                 }
-                for (int i = 0; i <= arr2.Length -1; i++)
+                for (int i = 0; i <= arrMidle.Length -1; i++)
                 {
-                    arr2[i] = inputArr[stopIndex1];
+                    arrMidle[i] = inputArr[stopIndex1];
                     stopIndex1++;
                 }
                 for (int i = 0; i < sumArr.Length; i++)
                 {
-                    sumArr[i] = arr1[i] + arr2[i];
+                    sumArr[i] = arrLefRight[i] + arrMidle[i];
                 }
             }
             else
