@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 
 namespace _04._Fold_and_Sum
@@ -12,7 +12,6 @@ namespace _04._Fold_and_Sum
                 .Select(int.Parse)
                 .ToArray();
             int[] sumArr = new int[inputArr.Length / 2];
-
 
             if (inputArr.Length > 4)
             {
